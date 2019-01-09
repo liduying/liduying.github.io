@@ -1,0 +1,141 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title:  lihuiyong123
+subtitle: 分享技术，品味人生
+name: lihuiyong123 
+email: lihuiyongty@163.com
+description: 本站是lihuiyong123的技术分享博客。内容涵盖生活故事、Java后端技术。
+keywords: lihuiyong123,
+encoding: "utf-8"
+favicon: favicon.png 
+
+repository: lihuiyong123/lihuiyong123.github.io
+github_url: https://github.com/lihuiyong123
+##cnblog_url: http://www.cnblogs.com/ityouknow
+url: http://lihuiyong123.github.io
+##enforce_ssl: ityouknow.com
+
+## Gem
+plugins:
+  - jekyll-paginate
+  - jekyll-geo-pattern
+  - rouge
+  - kramdown
+  - jekyll-github-metadata
+  - jekyll-octicons
+  
+# Build settings
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+
+source: .
+destination: ./_site
+
+quiet: false
+defaults: []
+
+kramdown:
+  input: GFM
+  enable_coderay: true
+  syntax_highlighter: rouge
+
+syntax_highlighter_opts:
+   coderay_line_numbers: nil
+
+# Pagination
+paginate: 10
+paginate_path: 'page:num'
+
+# Navigation. If you do not like these modules, just remove them :D
+navs:
+
+  -
+    href: /
+    label: Home
+  -
+    href: /link.html
+    label: Link
+
+  -
+    href: /about.html
+    label: About
+
+
+# labels. my blog key words
+labels:
+
+  -
+    href: /share/2017/10/01/resource-sharing.html
+    name: 资源
+
+  -
+    href: /life.html
+    name: 故事
+  -
+    href: /it.html
+    name: It   
+
+# selected articles
+classes:
+
+  -
+    href: /life.html
+    name: 我的故事
+    describe: 生活就是故事，故事就是生活
+
+
+# ---------------- #
+#       RSS        #
+# ---------------- #
+subscribe_rss: /feed.xml
+
+# Sidebar to show popular repo
+side_bar_repo_limit: 6 # Number of repos to show
+
+# Google Analytics
+# analytics :
+# provider : google
+#   google :
+#     tracking_id : ''  # ex. UA-72165600-X
+
+
+# For about.html. Fell free to create your own!
+skill_software_keywords: [Java, MySQL, Oracle, Design Patterns]
+skill_j2ee_keywords: [Spring, Struct, Hibernet, MyBatis, JSP]
+skill_web_keywords: [HTML, CSS, JS, JQuery, Ajax, NodeJS, ExpressJS, MongoDB, Redis, PHP,  Boostrap]
+skill_mobile_app_keywords: [vuejs, hyhird app]
+
+
+# ---------------- #
+#      Comments    #
+# ---------------- #
+# support provider: disqus, gitment, gitalk
+#comments_provider: gitalk
+# !!!重要!!! 请修改下面这些信息为你自己申请的
+# !!!Important!!! Please modify infos below to yours
+# https://disqus.com
+#disqus:
+#    username: lihuiyong123
+# https://imsun.net/posts/gitment-introduction/
+#gitment:
+#    owner: lihuiyong123
+#    repo: blog-comments
+#    oauth:
+#        client_id: 61bfc53d957e74e78f8f
+#        client_secret: 31c61e66cdcc9ada8db2267ee779d0bdafac434c
+# https://github.com/gitalk/gitalk#install
+#gitalk:
+#    owner: ityouknow
+#    repo: blog-comments
+#    clientID: 61bfc53d957e74e78f8f
+#    clientSecret: 31c61e66cdcc9ada8db2267ee779d0bdafac434c
+# 在使用其它评论组件时可点击显示 Disqus
+#lazy_load_disqus : true
