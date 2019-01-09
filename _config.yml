@@ -15,10 +15,10 @@ keywords: lihuiyong123,
 encoding: "utf-8"
 favicon: favicon.png 
 
-repository: lihuiyong123/lihuiyong123.github.io
+repository: lihuiyong123/lihuiyongblog
 github_url: https://github.com/lihuiyong123
 ##cnblog_url: http://www.cnblogs.com/ityouknow
-url: http://lihuiyong123.github.io
+url: https://lihuiyong123.github.io/lihuiyongblog/
 ##enforce_ssl: ityouknow.com
 
 ## Gem
