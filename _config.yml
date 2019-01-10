@@ -18,7 +18,7 @@ favicon: favicon.png
 repository: lihuiyong123/lihuiyongblog
 github_url: https://github.com/lihuiyong123
 ##cnblog_url: http://www.cnblogs.com/ityouknow
-url: https://lihuiyong123.github.io/lihuiyongblog/
+url: http://127.0.0.1:4000/lihuiyongblog/
 ##enforce_ssl: ityouknow.com
 
 ## Gem
