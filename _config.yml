@@ -58,14 +58,14 @@ paginate_path: 'page:num'
 navs:
 
   -
-    href: /
+    href: /lihuiyongblog
     label: Home
   -
-    href: /link.html
+    href: /lihuiyongblog/link.html
     label: Link
 
   -
-    href: /about.html
+    href: /lihuiyongblog/about.html
     label: About
 
 
@@ -73,21 +73,21 @@ navs:
 labels:
 
   -
-    href: /share/2017/10/01/resource-sharing.html
+    href: /lihuiyongblog/share/2017/10/01/resource-sharing.html
     name: 资源
 
   -
-    href: /life.html
+    href: /lihuiyongblog/life.html
     name: 故事
   -
-    href: /it.html
+    href: /lihuiyongblog/it.html
     name: It   
 
 # selected articles
 classes:
 
   -
-    href: /life.html
+    href: /lihuiyongblog/life.html
     name: 我的故事
     describe: 生活就是故事，故事就是生活
 
@@ -95,7 +95,7 @@ classes:
 # ---------------- #
 #       RSS        #
 # ---------------- #
-subscribe_rss: /feed.xml
+subscribe_rss: /lihuiyongblog/feed.xml
 
 # Sidebar to show popular repo
 side_bar_repo_limit: 6 # Number of repos to show
