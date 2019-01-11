@@ -10,6 +10,9 @@ keywords: 程序员
 
 整理自己的excel的小技巧
 
-例子  批量拆分
+例子  快速填充
+
+1.找出提取的公共字符 到新的列上。
+2.选中列  CTRL+E 快速填充到新的列上。
 
 ![](/lihuiyongblog/assets/images/2019/excel/excelfuc.gif)
