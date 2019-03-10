@@ -32,7 +32,7 @@ keywords: static
             }
         }    
 ```
-Output:  
+Output:
 user1 userNumber：2  
 user2 userNumber：2  
 
