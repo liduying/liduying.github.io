@@ -8,28 +8,34 @@ keywords: 执行计划
 ---
 # ORACLE explain  Field
 ## 一 各个字段的注释 
+<table>
+    <thead>
+        <tr><th>字段名</th><th>字段类型</th><th>含义</th></tr>
+    </thead>
+    <tbody>
+        <tr><td>STATEMENT_ID</td><td>VARCHAR2(30)</td><td>60</td></tr>
+        <tr><td>REMARKS</td><td>VARCHAR2(80)</td><td>与被解释规划的各步骤相关联的注释最长可达80 字节</td></tr>
+        <tr><td>OPERATION</td><td>VARCHAR2(30)</td><td>各步骤所执行内部操作的名称在某条语句所产生的第一行中该列的可能取值如下DELETE STATEMENT INSERT STATEMENT SELECT STATEMENT UPDATE STATEMENT</td></tr>
+        <tr><td>OPTIONS</td><td>VARCHAR2(30)</td><td>对OPERATION 列中所描述操作的变种</td></tr>
+        <tr><td>BJECT_NODE</td><td>VARCHAR2(128)</td><td>用于访问对象的数据库链接database link 的名称对于使用并行执行的本地查询该列能够描述操作中输出的次序</td></tr>
+        <tr><td>OBJECT_OWNER</td><td>VARCHAR2(30)</td><td>对于包含有表或索引的架构schema 给出其所有者的名称</td></tr>
+        <tr><td>OBJECT_NAME</td><td>VARCHAR2(30)</td><td>表或索引的名称</td></tr>
+        <tr><td>OBJECT_INSTANCE</td><td>INTEGER</td><td>根据对象出现在原始original 语句中的次序所给出的相应次序编号就原始的语句文本而论其处理顺序为自左至右自外向内景象扩张view</td></tr>
+        <tr><td>OBJECT_TYPE</td><td>VARCHAR2(30)</td><td>用于提供对象描述性信息的修饰符例如索引的NON-UNIQUE</td></tr>
+        <tr><td>OPTIMIZER</td><td>VARCHAR2(255)</td><td>当前优化程序的模式</td></tr>
+        <tr><td>ID</td><td>INTEGER</td><td>分配给执行规划各步骤的编号</td></tr>
+        <tr><td>PARENT_ID</td><td>INTEGER</td><td>对ID 步骤的输出进行操作的下一个执行步骤的ID</td></tr>
+        <tr><td>POSITION</td><td>INTEGER</td><td>对于具有相同PARENT_ID 的步骤其相应的处理次序</td></tr>
+        <tr><td>COST</td><td>INTEGER</td><td>根据优化程序的基于开销的方法所估计出的操作开销值对于使用基于规则方法的语句该列为空该列值没有特定的测量单位它只是一个用于比较执行规划开销大小的权重值</td></tr>
+        <tr><td>CARDINALITY</td><td>INTEGER</td><td>根据基于开销的方法对操作所访问行数的估计值</td></tr>
+        <tr><td>BYTES</td><td>INTEGER</td><td>根据基于开销的方法对操作所访问字节的估计</td></tr>
+        <tr><td>ROWS</td><td>INTEGER</td><td>从一个源返回的记录数，这个行源可能是一个表，一个索引，也可能是一个子查询</td></tr>
+        <tr><td>TempSpc</td><td>INTEGER</td><td>预估操作使用临时表空间的大小</td></tr>
+        <tr><td>TIME</td><td>DATE</td><td>预估执行操作所需要的时间(HH:MM:SS)</td></tr>
+    </tbody>
+</table>
 
-   > 字段名|字段类型|含义
-   > :--|:--|:--|:--|:--
-   > STATEMENT_ID |VARCHAR2(30) | 语句中所指定的最优STATEMENT_ID 参数值
-   > REMARKS | VARCHAR2(80) | 与被解释规划的各步骤相关联的注释最长可达80 字节
-   > OPERATION | VARCHAR2(30) |各步骤所执行内部操作的名称在某条语句所产生的第一行中该列的可能取值如下DELETE STATEMENT INSERT STATEMENT SELECT STATEMENT UPDATE STATEMENT
-   > OPTIONS | VARCHAR2(30) | 对OPERATION 列中所描述操作的变种
-   > BJECT_NODE | VARCHAR2(128) | 用于访问对象的数据库链接database link 的名称对于使用并行执行的本地查询该列能够描述操作中输出的次序
-   > OBJECT_OWNER | VARCHAR2(30) | 对于包含有表或索引的架构schema 给出其所有者的名称
-   > OBJECT_NAME | VARCHAR2(30) | 表或索引的名称
-   > OBJECT_INSTANCE | INTEGER | 根据对象出现在原始original 语句中的次序所给出的相应次序编号就原始的语句文本而论其处理顺序为自左至右自外向内景象扩张view
-   > OBJECT_TYPE | VARCHAR2(30) | 用于提供对象描述性信息的修饰符例如索引的NON-UNIQUE
-   > OPTIMIZER | VARCHAR2(255) | 当前优化程序的模式
-   > ID | INTEGER | 分配给执行规划各步骤的编号
-   > PARENT_ID | INTEGER |  对ID 步骤的输出进行操作的下一个执行步骤的ID
-   > POSITION | INTEGER | 对于具有相同PARENT_ID 的步骤其相应的处理次序
-   > COST | INTEGER | 根据优化程序的基于开销的方法所估计出的操作开销值对于使用基于规则方法的语句该列为空该列值没有特定的测量单位它只是一个用于比较执行规划开销大小的权重值
-   > CARDINALITY | INTEGER | 根据基于开销的方法对操作所访问行数的估计值
-   > BYTES | INTEGER | 根据基于开销的方法对操作所访问字节的估计
-   > ROWS | INTEGER | 从一个源返回的记录数，这个行源可能是一个表，一个索引，也可能是一个子查询
-   > TempSpc | INTEGER | 预估操作使用临时表空间的大小 
-   > TIME | DATE | 预估执行操作所需要的时间(HH:MM:SS)
+
 ## 二 执行计划的顺序
 执行顺序的原则是：由上至下，从右向左 
 由上至下：在执行计划中一般含有多个节点，相同级别(或并列)的节点，靠上的优先执行，靠下的后执行 
