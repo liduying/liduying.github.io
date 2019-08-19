@@ -6,6 +6,7 @@ category: java
 tags: [java]
 keywords: static
 ---
+
 一、static代表着什么
 
 &ensp;&ensp;&ensp;在Java中并不存在全局变量的概念，但是我们可以通过static来实现一个“伪全局”的概念，在Java中static表示“全局”或者“静态”的意思，用来修饰成员变量和成员方法，当然也可以修饰代码块。
