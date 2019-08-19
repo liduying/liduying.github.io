@@ -6,8 +6,10 @@ category: oracle
 tags: [oracle]
 keywords: 执行计划
 ---
- ORACLE explain  Field
- 一 各个字段的注释 
+ # ORACLE explain  Field
+ ## 一 各个字段的注释 
+ ---
+ 
 <table>
     <thead>
         <tr><th>字段名</th><th>字段类型</th><th>含义</th></tr>
